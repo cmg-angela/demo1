@@ -1,0 +1,98 @@
+.featured-tabs-container {
+  background-color: $tertiary-color;
+  @media #{$small-only} {
+  }
+}
+.featured-tabs {
+  height: auto;
+  padding: 2.125rem 0 0.075rem;
+  margin-top: 0;
+    [id^=wp_shaper_san_custom_text_widget-] h6 {
+    color: #360;
+    font-family: $font-family-sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 25px;
+    text-align: center;
+    min-height: 60px;
+    margin-bottom: 0;
+      a {
+        color: #360;
+        font-size: 1.45rem;
+        line-height: 2rem;
+      }
+      .textwidget {
+        color: #360;
+        line-height: 1.3rem;
+      }
+    @media #{$large} {
+      width: 150px;
+      margin: rem-calc(12) auto;
+
+      }
+    @media
+    (max-width : 800px) {
+        font-size: 23px;
+      }
+    @media #{$small-only} {
+//       float: left;
+      font-size: .8rem;
+      color: $white;
+      text-align: center;
+      margin-top: 2.2rem;
+      text-align: left;
+      margin-left: 6px;
+      a {
+        color: $white;
+        font-size: rem-calc(15);
+      }
+    }
+  }
+  .img-circle {
+     @media #{$small-only} {
+     max-width: 10.0rem;
+     float: left;
+    }
+  }
+  article {
+    @media #{$small-only} {
+      background: #5da967;
+      padding-left:  0;
+    }
+  }
+  @media #{$small-only} {
+ padding: rem-calc(20) 0 rem-calc(20);
+}
+}/* END .featured-tabs */
+.wp_shaper_san_custom_text_widget {
+  margin-bottom: 10px;
+   .textwidget {
+        color: #360;
+        line-height: 1.4rem;
+      }
+}
+.featured-tabs-container-interior {
+  @extend .featured-tabs-container;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  margin-bottom: rem-calc(10);
+  margin-left: -$column-gutter*2;
+  margin-right: -$column-gutter*2;
+}
+#sidebar .featured-tabs-container-interior h6 {
+  color: #360;
+  font-family: $font-family-sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+    a {
+      margin-top: 10px;
+      color: $white;
+      font-size: rem-calc(15);
+      margin: 18px 3px 0 3px
+    }
+
+}

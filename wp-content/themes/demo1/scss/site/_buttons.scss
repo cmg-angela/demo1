@@ -1,0 +1,25 @@
+/*
+
+ Basic styles for buttons
+
+*/
+.featured-tab-button {
+  @extend button;
+  background-color: rgba(51, 102, 0, 0.5);
+  margin-top: 1.7rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 1rem .5rem;
+}
+.sidebar-button {
+  @extend button;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  background: none;
+  margin-bottom: 0;
+  &:hover {
+    background: none;
+  }
+}

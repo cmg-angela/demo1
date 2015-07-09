@@ -1,0 +1,528 @@
+/*
+
+ Basic styles for FoundationPress demo site
+
+*/
+
+
+// Reset margin and padding on figure element
+figure {
+	margin: 0;
+	padding: 0;
+}
+
+// Add some basic styling for figcaption element
+figcaption {
+	margin-bottom: rem-calc(20);
+	margin-top: rem-calc(10);
+	color: #6f6f6f;
+}
+
+// Add the alignment classes used by the WordPress media library
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+blockquote.alignleft,
+img.alignleft {
+	margin: rem-calc(7) rem-calc(24) rem-calc(7) 0;
+}
+
+.wp-caption.alignleft {
+	margin: rem-calc(7) rem-calc(14) rem-calc(7) 0;
+}
+
+blockquote.alignright,
+img.alignright {
+	margin: rem-calc(7) 0 rem-calc(7) rem-calc(24);
+}
+
+
+// Add some whitespace between top bar and content
+.c-container, .tab-bar {
+	margin-bottom: rem-calc(0);
+}
+.tab-bar {
+  background: $white;
+  h1 {
+    color: $primary-color;
+    text-align: center;
+    font-family: $font-family-serif;
+    font-weight: 200;
+    @media #{$small-only}{
+      font-size: 1rem;
+      margin-left: 14%;
+      span.tertiary-color {
+      color: $tertiary-color;
+    }
+    span.second-color {
+      color: #8ed7d9;
+    }
+
+    }
+  }
+  img {
+    float: left;
+    margin-left: 50px;
+    margin-top: 10px;
+  }
+}
+.tab-bar .menu-icon span::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 0;
+  top: 50%;
+  margin-top: -0.5rem;
+  left: 0.90625rem;
+  box-shadow: 0 0 0 1px $primary-color, 0 7px 0 1px $primary-color, 0 14px 0 1px $primary-color;
+  width: 1rem;
+}
+// Fix the issue where the WP adminbar overlaps the mobile menu
+#wpadminbar {
+	position: fixed !important;
+}
+
+
+// A more subtle background color for the active menu item
+.top-bar-section li.active:not(.has-form) a:not(.button)  {
+	background: #272727;
+  text-align: left;
+  padding: 0 .9rem;
+}
+.top-bar-section li.active:not(.has-form) a:hover:not(.button) {
+	background: #202020;
+  padding: 0 .9rem;
+}
+.top-bar-section li:not(.has-form) a:not(.button) {
+  padding: 0 2.8rem;
+  line-height: 4rem;
+  background: white;
+  @media (min-width: 642px) and (max-width: 990px) {
+    padding: 0 .5rem;
+}
+}
+.top-bar-section .has-dropdown > a:after {
+    border-color: $secondary-color rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+    margin-right: 1.3rem;
+}
+.top-bar-section ul li > a {
+  font-weight: 300;
+}
+.top-bar-section .dropdown li > a {
+  font-weight: 300;
+}
+ // Hero
+
+#homepage-hero {
+	background: url("http://foundation.zurb.com/assets/img/marquee-stars.svg") repeat scroll 0 0 #074E68;
+	padding: rem-calc(20) 0;
+	margin: - rem-calc(32) 0 rem-calc(32);
+	position: relative;
+	text-align: left;
+	height: auto;
+
+		h1 a, h4 { color: #fff; }
+
+		.floatingyeti img {
+			max-width: 30%;
+			position: absolute;
+			right: rem-calc(100);
+		}
+
+		.download { margin-top: rem-calc(20); }
+	}
+
+/* START demo1 styles. Break apart as necessary. -JMS */
+/* top-bar and contact-bar styles */
+.contact-bar-container {
+  background: $primary-color;
+// background: red;
+}
+.contact-bar {
+  height: 70px;
+  padding-top: 19px;
+  @media (max-width: 1426px) {
+      padding-top: 12px;
+    }
+  h1 {
+    // Base text style
+    font-family: $font-family-serif;
+    font-size: 1.2375rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+    color: $white;
+    margin-bottom: 0;
+    span.tertiary-color {
+      color: $tertiary-color;
+    }
+    span.second-color {
+      color: $alt-font-color;
+    }
+ }
+  p {
+    font-family: $font-family-sans-serif;
+    font-size: 1.1375rem;
+    font-weight: 400;
+    line-height: 1.1375rem;
+    color: $alt-font-color;
+    text-align: right;
+    margin-top: 4px;
+    margin-bottom: 0;
+    @media (max-width: 1426px) {
+      margin-top: 0;
+    }
+    @media #{$small-only} {
+      font-size: 1.0375rem;
+      text-align: center;
+      color: $white;
+      }
+    }
+    div {
+      padding-top: 6px;
+    }
+    img {
+      width: 4.3rem;
+      top: -6px;
+    }
+}
+.textwidget>.show-for-medium-up {
+  min-height: 110px;
+}
+.top-bar-section .dropdown li {
+width: 100%;
+height: rem-calc(60);
+}
+nav.top-bar {
+text-align:center;
+}
+.top-bar-section .dropdown li:not(.has-form):not(.active) > a:not(.button) {
+  text-align: left;
+}
+section.top-bar-section {
+display: inline-block;
+}
+.contact-number {
+  color: $white;
+  white-space: nowrap;
+}
+/*================================
+=            main-img            =
+================================*/
+.main-img-container {
+  background-image: url('../../../uploads/2015/02/main-img.jpg');
+  height: 450px;
+  background-size: cover;
+  background-position: center center;
+  @media #{$medium-only} {
+    max-height: 400px;
+  }
+  @media #{$small-only} {
+    max-height: 300px;
+  }
+}
+/*
+.main-img {
+  @media ($medium-range) {
+    clear: both;
+  }
+}
+*/
+.calling-card {
+   @media #{$large-up} {
+  background-image: url('../../../uploads/2015/02/calling-card-logo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: .375rem;
+  margin-left: rem-calc(10);
+  h2 {
+    color: $secondary-color;
+    text-align: center;
+    margin-top: 300px;
+    font-family: $font-family-serif;
+    .second-line {
+      color: $tertiary-color;
+      font-size: rem-calc(17px);
+    }
+    .third-line {
+      color: $ghost;
+      font-size: rem-calc(16px);
+    }
+  }
+}
+}
+/*-----  End of main-img  ------*/
+
+
+
+
+.association-awards-container {
+  background: #fafafa;
+  padding-top: 6px;
+  h3 {
+    font-size: rem-calc(24px);
+    font-family: $font-family-sans-serif;
+    font-weight: 300;
+    color: #979797;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  hr {
+    border: solid #DDD;
+    border-width: 1px 0 0;
+    clear: both;
+    margin: 0.5rem 0 1.1rem;
+    height: 0;
+    }
+}
+/*====================================
+=            introduction            =
+====================================*/
+.introduction-container {
+  background: $secondary-color;
+  padding: rem-calc(35) 0 rem-calc(35);
+  margin-bottom: rem-calc(30);
+  @media #{$small-only} {
+      padding: rem-calc(24) 0 rem-calc(25);
+    }
+
+}
+.introduction {
+  h2 {
+    color: $white;
+    font-family: $font-family-sans-serif;
+    font-size: rem-calc(44);
+    font-weight: 300;
+    line-height: rem-calc(40);
+    text-align: center;
+    @media #{$small-only} {
+      font-size: rem-calc(28);
+    }
+  }
+}
+
+/*-----  End of introduction  ------*/
+
+
+
+
+/*================================
+=            interior-header     =
+================================*/
+
+.header-container {
+  background-color: #f4f5f7;
+//   height: 140px;
+  margin-bottom: rem-calc(30);
+  h1 {
+    margin-top: rem-calc(20);
+    margin-bottom: rem-calc(15);
+  }
+}
+
+.interior-page {
+  text-align: center;
+}
+
+
+
+
+
+
+/*-----  End of interior-header  ------*/
+
+
+
+
+
+
+/*==============================
+=            main content     =
+==============================*/
+
+
+.home-feature-img {
+  float: left;
+  padding-right: rem-calc(30);
+  @media #{$small-only} {
+    padding-right: 0;
+    float: none;
+    margin: auto;
+  }
+}
+.hentry p {
+  line-height: 2;
+}
+
+
+/*-----  End of main content area  ------*/
+
+/*==============================
+=            footer            =
+==============================*/
+
+.footer-container {
+  background: #547b97;
+  padding: rem-calc(52px) 0 rem-calc(50px);
+}
+
+footer {
+  div {
+    margin-bottom: 10px;
+  }
+  h4 {
+    color: $tertiary-color;
+    font-weight: 700;
+    font-size: rem-calc(24px);
+  }
+  h5 {
+    color: $tertiary-color;
+    font-weight:400;
+    font-size: rem-calc(22px);
+  }
+  .address {
+    height: auto;
+    margin-top: 0px;
+    background: $primary-color;
+    font-style: normal;
+    h3 {
+      color: $tertiary-color;
+    }
+    p {
+      color: $white;
+      font-family: Lato;
+      font-size: rem-calc(16);
+      font-weight: 300;
+      line-height: rem-calc(4);
+      font-style: normal;
+    }
+  }
+  .contact {
+    p {
+
+      font-size: rem-calc(20);
+      line-height: rem-calc(8);
+      margin-left: rem-calc(30);
+      font-weight: 300;
+      width: 100%;
+      .contact-first {
+        color: #badcdd;
+        text-align: right;
+        width: 31%;
+        float: left;
+      }
+      .contact-second, a {
+        color: $white;
+        text-align: right;
+        width: 70%;
+      }
+      @media #{$small-only} {
+        margin-left: rem-calc(30);
+      }
+    }
+  }
+}
+/*-----  End of footer  ------*/
+
+
+/*================================
+=            colophon            =
+================================*/
+
+
+.colophon-container {
+  background: $primary-color;
+  padding: rem-calc(30px) 0;
+}
+.colophon {
+  p {
+    color: $white;
+    margin-bottom: 0;
+  }
+  h5 {
+    color: $tertiary-color;
+  }
+}
+.social {
+  h5 {
+    text-align: right;
+  }
+  ul {
+  display: inline-block;
+  float: right;
+  margin-bottom: 0;
+    li {
+    display: inline-block;
+  }
+}
+}
+
+/*-----  End of colophon  ------*/
+
+/*==========  announcement for development  ==========*/
+/**
+
+  TODO:
+  - remove this section
+
+**/
+
+.announcement-container {
+ background: red;
+ text-align: center;
+ font-size: 22px;
+ padding: 50px;
+}
+
+.off-canvas-list li  {
+  background: $primary-color;
+}
+.off-canvas-list li li {
+  background: $secondary-color;
+}
+.off-canvas-list ul.sub-menu.dropdown {
+  list-style: none;
+  background: $secondary-color;
+  padding-left: 27px;
+  margin-left: 0;
+}
+.off-canvas-menu-title {
+  background: $primary-color;
+  padding: rem-calc(7) 0;
+  border-bottom: 2px solid $aluminum;
+  font-size: rem-calc(20);
+  font-weight: 300;
+  font-family: $font-family-sans-serif;
+  color: $white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+
+/*================================
+=            readmore            =
+================================*/
+
+.moretag {
+  color: $tertiary-color;
+}
+.archive header h2 a {
+  color: $secondary-color;
+}
+.pagination {
+  display: none;
+}
+/*-----  End of readmore  ------*/

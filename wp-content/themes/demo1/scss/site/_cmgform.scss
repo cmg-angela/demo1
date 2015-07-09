@@ -1,0 +1,153 @@
+@charset "UTF-8";
+/* CSS Document */
+/* cmgform styling */
+#contact-quick {
+  margin-top: 1.25rem;
+}
+#contact-quick, .widget_cmgform_short_widget {
+  h6 {
+  margin-top: rem-calc(16);
+  color: $secondary-color;
+  font-family: $font-family-sans-serif;
+  font-size: rem-calc(36);
+  font-weight: $font-weight-normal;
+  line-height: rem-calc(27.08333px);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 0;
+  border-top:  2px solid $tertiary-color;
+  border-right: 2px solid $tertiary-color;
+  border-left: 2px solid $tertiary-color;
+  padding-top: rem-calc(10);
+  }
+}
+.cmgform {
+	width:100%;
+	padding: rem-calc(16);
+	border-bottom:  2px solid $tertiary-color;
+  border-right: 2px solid $tertiary-color;
+  border-left: 2px solid $tertiary-color;
+}
+#contact-quick {
+  @extend .cmgform;
+  border-top: 2px solid $tertiary-color;
+  margin-bottom: 1.25rem;
+}
+.cmgform input, .cmgform textarea {
+	display:block;
+	width:100%;
+	resize: none;
+	background: $secondary-color;
+	color: $white;
+}
+#contact-quick input, #contact-quick textarea {
+	background: $secondary-color;
+	color: $white;
+}
+.cmgform input:focus, .cmgform textarea:focus {
+	display:block;
+	width:100%;
+	resize: none;
+	background: $white;
+	color: $secondary-color;
+}
+#contact-quick input:focus, #contact-quick textarea:focus {
+
+	resize: none;
+	background: $white;
+	color: $secondary-color;
+}
+
+.cmgform input#contact_state, .cmgform input#contact_zip {
+	float:left;
+	position:relative;
+	width:42%;
+}
+.cmgform input#contact_zip {
+	float:right;
+	margin-right:0;
+}
+.cmgform .contact_subject, #contact_subject {
+	display:none;
+}
+.cmgform #contact_submit {
+	// width:30%;
+	@include button;
+	background: $secondary-color;
+	text-transform:  uppercase;
+	font-size: rem-calc(25);
+}
+.completion-instructions {
+  color: $white;
+  background: $tertiary-color;
+  text-align: center;
+  padding: .5625rem 2.2rem;
+  margin-bottom: 0;
+ }
+.arrow-down {
+	width: 0;
+	height: 0;
+	border-left: 30px solid transparent;
+	border-right: 30px solid transparent;
+	border-top: 20px solid $tertiary-color;
+	margin: auto;
+	margin-bottom: rem-calc(5);
+  }
+
+/* reCAPTCHA custom styling */
+.recaptchatable, #recaptcha_area tr, td.recaptcha_image_cell, #recaptcha_area th, #recaptcha_image, #recaptcha_image img { width:293px !important; }
+.recaptcha_r1_c1, .recaptcha_r2_c1, .recaptcha_r2_c2, .recaptcha_r3_c1, .recaptcha_r3_c2, .recaptcha_r3_c3, .recaptcha_r4_c2 { visibility:hidden; }
+.recaptchatable .recaptcha_r4_c1, .recaptcha_r7_c1, recaptcha_r8_c1{ background:none !important; }
+td.recaptcha_image_cell, td.recaptcha_r4_c4, .recaptcha_r8_c1{ background: none !important; }
+.recaptchatable .recaptcha_r4_c1 { width: 190px !important; }
+
+/* mathCAPTCHA styling */
+#mc, #contact-quick #mc {
+  color:$white;
+  float:left;
+  text-align:center;
+  width:100%;
+  }
+#mc_r, #contact-quick #mc_r {
+  width:25%;
+  float:right;
+  background: #badcdd;
+  }
+#mc_r:focus, #contact-quick #mc_r:focus {
+  color: $white;
+}
+#mc_form_c_1, #mc_form_c_2, #contact-quick #mc_form_c_1, #contact-quick #mc_form_c_2 {
+	border: none !important;
+	font-size: $paragraph-font-size;
+	font-family:$font-family-sans-serif;
+	float: left;
+	font-weight: $font-weight-normal;
+	text-align:center;
+	width: 27%;
+  background: #badcdd;
+}
+#mc_form_op, #mc_form_eq {
+	font-size: rem-calc(16);
+	font-family:$font-family-serif;
+	font-weight: $font-weight-normal;
+	float: left;
+	text-align:center;
+	width: 10%;
+	color: $secondary-color;
+}
+
+/* admin styling */
+.cmgform_generated_shortcode {
+	display:block;
+	margin-bottom:30px;
+}
+.cmgform_generated_shortcode code {
+	display:inline-block;
+	font:$font-weight-normal rem-calc(15) $font-family-serif;
+	padding:rem-calc(10);
+	text-align:center;
+}
+#contact_submit {
+  @extend .button;
+  @extend .expand;
+}
